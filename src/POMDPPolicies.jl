@@ -6,6 +6,7 @@ using StatsBase # for Weights
 using SparseArrays # for sparse vectors in alpha_vector.jl
 using Parameters
 using Distributions # For logpdf extenstion in playback policy
+using FiniteHorizonPOMDPs
 
 using POMDPs
 import POMDPs: action, value, solve, updater
@@ -31,6 +32,11 @@ export
     alphapairs
 
 include("alpha_vector.jl")
+
+export
+    StagedPolicy
+
+include("staged_policy.jl")
 
 export
     FunctionPolicy,
