@@ -6,6 +6,7 @@ using StatsBase # for Weights
 using SparseArrays # for sparse vectors in alpha_vector.jl
 using Parameters
 using Distributions # For logpdf extenstion in playback policy
+using Printf
 
 using POMDPs
 import POMDPs: action, value, solve, updater
@@ -81,5 +82,10 @@ export
     PlaybackPolicy
 
 include("playback.jl")
+
+export
+    BlindPolicySolver
+
+include("blind_policy.jl")
 
 end

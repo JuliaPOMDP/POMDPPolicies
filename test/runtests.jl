@@ -7,6 +7,9 @@ using POMDPModelTools
 using POMDPModels
 using Random
 
+@testset "blind policy" begin
+    include("test_blind_policy.jl")
+end
 @testset "alpha" begin
     include("test_alpha_policy.jl")
 end
